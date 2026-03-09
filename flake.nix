@@ -50,8 +50,10 @@
           export EXTRA_CCFLAGS="-I/usr/include"
           export CMAKE_PREFIX_PATH="${pkgs.fmt.dev}:$CMAKE_PREFIX_PATH"
           export PKG_CONFIG_PATH="${pkgs.fmt.dev}/lib/pkgconfig:$PKG_CONFIG_PATH"
+          export LD_LIBRARY_PATH="${nvidiaPackage}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH"
+                    
 
-          fish
+          exec fish
           . .venv/bin/activate.fish
         '';
       };
