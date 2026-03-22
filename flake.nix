@@ -28,13 +28,13 @@
           cudaPackages.cudnn
           libGLU
           libGL
-          xorg.libXi
-          xorg.libXmu
+          libXi
+          libXmu
           freeglut
-          xorg.libXext
-          xorg.libX11
-          xorg.libXv
-          xorg.libXrandr
+          libXext
+          libX11
+          libXv
+          libXrandr
           zlib
           ncurses
           stdenv.cc
