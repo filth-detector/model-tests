@@ -11,3 +11,6 @@ wheels/
 
 data/
 segformer-finetuned-results
+final_model*
+graphs/
+results/
