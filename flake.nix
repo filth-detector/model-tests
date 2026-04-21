@@ -33,6 +33,9 @@
           freeglut
           libXext
           libX11
+          libxcb
+          libGL
+          glib
           libXv
           libXrandr
           zlib
@@ -50,7 +53,7 @@
           export EXTRA_CCFLAGS="-I/usr/include"
           export CMAKE_PREFIX_PATH="${pkgs.fmt.dev}:$CMAKE_PREFIX_PATH"
           export PKG_CONFIG_PATH="${pkgs.fmt.dev}/lib/pkgconfig:$PKG_CONFIG_PATH"
-          export LD_LIBRARY_PATH="${nvidiaPackage}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH"
+          export LD_LIBRARY_PATH="${pkgs.glib.out}/lib:${pkgs.libGL}/lib:${pkgs.libxcb}/lib:${nvidiaPackage}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH"
                     
 
           exec fish
